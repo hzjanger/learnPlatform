@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-add">
+        <div style="display: flex;align-items: center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/freeCourse">免费课程</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">职业路径</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">实战</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">猿问</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">手记</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">找工作</a>
+            </li>
+          </ul>
+          <form class="search-form">
+            <mat-form-field class="search-full-width">
+              <input matInput placeholder="" value="">
+              <!--<mat-icon >search</mat-icon>-->
+              <mat-icon matSuffix svgIcon="search" class="search-icon"
+                        (click)="onSearch()"></mat-icon>
+            </mat-form-field>
+          </form>
+        </div>
+        <div style="display: flex;align-items: center">
+          <mat-slide-toggle class="dark-mode">黑夜模式</mat-slide-toggle>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item">
+              <a class="nav-link" href="#">登录</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">注册</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

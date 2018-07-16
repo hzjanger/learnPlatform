@@ -1,0 +1,36 @@
+mat-card {
+  cursor: pointer;
+  margin-top: 1rem;
+}
+mat-card img {
+  -webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
+  border-radius: 8%;
+}
+mat-card p {
+  margin-bottom: .5rem;
+}
+mat-card p a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+mat-card p span {
+  color: #93999F;
+  font-size: .8rem;
+  margin-right: .7rem;
+}
+
+.center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.center mat-icon {
+  display: inline-flex;
+  width: .9rem;
+  height: .9rem;
+  color: #93999F;
+  margin-right: .2rem;
+}

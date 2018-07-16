@@ -1,0 +1,114 @@
+<div class="bg-white">
+  <div class="container">
+    <div class="course-direction-box">
+      <div>
+        <span class="type">方向</span>
+      </div>
+      <div>
+        <ul class="nav">
+          <li class="nav-item" *ngFor="let direction of course_direction">
+            <a class="nav-link" href="#">{{direction}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="course-direction-box">
+      <div>
+        <span class="type">分类</span>
+      </div>
+      <div>
+        <ul class="nav">
+          <li class="nav-item" *ngFor="let direction of course_type">
+            <a class="nav-link" href="#">{{direction}}</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="course-direction-box">
+      <div>
+        <span class="type">难度</span>
+      </div>
+      <div>
+        <ul class="nav">
+          <li class="nav-item" *ngFor="let difficult of course_difficult">
+            <a class="nav-link" href="#">{{difficult}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light">
+  <div class="container">
+    <div class="course-tool-box">
+      <div>
+        <mat-chip-list>
+          <mat-chip color="primary" selected>最新</mat-chip>
+          <mat-chip color="primary">最热</mat-chip>
+        </mat-chip-list>
+      </div>
+      <div>
+        <span style="color: #ff0000;">1</span>/30
+        <mat-icon svgIcon="navigate-before" class="material-icons"></mat-icon>
+        <mat-icon svgIcon="navigate-next" class="material-icons"></mat-icon>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+      <div class="col-3">
+        <app-course-list></app-course-list>
+      </div>
+    </div>
+    <div class="page-box">
+      <ngb-pagination [collectionSize]="1234" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+    </div>
+  </div>
+</div>
+
+
