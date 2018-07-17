@@ -1,9 +1,9 @@
 export class course {
-  private _name: string;
-  private _type: string;
-  private _grade: string;
-  private _people_amount: number;
-  private _star_grade: number;
+  _name: string;
+  _type: string;
+  _grade: string;
+  _people_amount: number;
+  _star_grade: number;
 
 
   constructor(name: string, type: string, grade: string, people_amount: number, star_grade: number) {

@@ -16,6 +16,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseStarComponent } from './course-star/course-star.component';
 import { FreeCourseComponent } from './free-course/free-course.component';
+import { SearchHomeComponent } from './search/search-home/search-home.component';
+import { SearchCourseComponent } from './search/search-course/search-course.component';
+import { SearchBlogComponent } from './search/search-blog/search-blog.component';
+import { SearchProblemComponent } from './search/search-problem/search-problem.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   imports: [
@@ -34,7 +39,12 @@ import { FreeCourseComponent } from './free-course/free-course.component';
     BodyComponent,
     CourseListComponent,
     CourseStarComponent,
-    FreeCourseComponent
+    FreeCourseComponent,
+    SearchHomeComponent,
+    SearchCourseComponent,
+    SearchBlogComponent,
+    SearchProblemComponent,
+    SearchComponent
   ],
   exports: [
     NavbarComponent,
@@ -43,7 +53,12 @@ import { FreeCourseComponent } from './free-course/free-course.component';
     BodyComponent,
     CourseListComponent,
     CourseStarComponent,
-    FreeCourseComponent
+    FreeCourseComponent,
+    SearchHomeComponent,
+    SearchCourseComponent,
+    SearchBlogComponent,
+    SearchProblemComponent,
+    SearchComponent
   ]
 })
 export class StudyModule {

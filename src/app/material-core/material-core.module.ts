@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
-  MatCardModule, MatChipsModule,
+  MatCardModule, MatChipsModule, MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -20,7 +20,8 @@ import {
     MatSlideToggleModule,
     MatListModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatGridListModule
 
   ],
   declarations: [
@@ -34,7 +35,8 @@ import {
     MatSlideToggleModule,
     MatListModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatGridListModule
   ]
 })
 export class MaterialCoreModule { }
