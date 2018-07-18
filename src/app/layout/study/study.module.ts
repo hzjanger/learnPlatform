@@ -21,6 +21,13 @@ import { SearchCourseComponent } from './search/search-course/search-course.comp
 import { SearchBlogComponent } from './search/search-blog/search-blog.component';
 import { SearchProblemComponent } from './search/search-problem/search-problem.component';
 import { SearchComponent } from './search/search.component';
+import { PersonalBindInfoComponent } from './personal/personal-bind-info/personal-bind-info.component';
+import { PersonalComponent } from './personal/personal.component';
+import { PersonalInfoComponent } from './personal/personal-info/personal-info.component';
+import { PersonalOperateRecordComponent } from './personal/personal-operate-record/personal-operate-record.component';
+import { PersonalNameAttestComponent } from './personal/personal-name-attest/personal-name-attest.component';
+import { PersonalStudentAttestComponent } from './personal/personal-student-attest/personal-student-attest.component';
+import { PersonalReceiveAddressComponent } from './personal/personal-receive-address/personal-receive-address.component';
 
 @NgModule({
   imports: [
@@ -44,7 +51,14 @@ import { SearchComponent } from './search/search.component';
     SearchCourseComponent,
     SearchBlogComponent,
     SearchProblemComponent,
-    SearchComponent
+    SearchComponent,
+    PersonalBindInfoComponent,
+    PersonalComponent,
+    PersonalInfoComponent,
+    PersonalOperateRecordComponent,
+    PersonalNameAttestComponent,
+    PersonalStudentAttestComponent,
+    PersonalReceiveAddressComponent
   ],
   exports: [
     NavbarComponent,

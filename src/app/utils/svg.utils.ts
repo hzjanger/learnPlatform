@@ -14,7 +14,22 @@ export const loadSvgResource = (iconRegistry: MatIconRegistry, sanitizer: DomSan
   //上一页图标
   iconRegistry.addSvgIcon('navigate-before', sanitizer.bypassSecurityTrustResourceUrl(`${imgUrl}/baseline-navigate_before-24px.svg`));
   //下一页图标
-  iconRegistry.addSvgIcon('navigate-next', sanitizer.bypassSecurityTrustResourceUrl(`${imgUrl}/baseline-navigate_next-24px.svg`))
-
+  iconRegistry.addSvgIcon('navigate-next', sanitizer.bypassSecurityTrustResourceUrl(`${imgUrl}/baseline-navigate_next-24px.svg`));
+  //手机图标
+  iconRegistry.addSvgIcon('iphone', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-phone_iphone-24px.svg`));
+  //邮箱图标
+  iconRegistry.addSvgIcon('email-outline', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-mail_outline-24px.svg`));
+  //学籍图标
+  iconRegistry.addSvgIcon( 'school', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-school-24px.svg`));
+  //关闭图标
+  iconRegistry.addSvgIcon( 'close', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-close-24px.svg`));
+  //帮助图标
+  iconRegistry.addSvgIcon( 'help', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-help-24px.svg`));
+  //社交图标
+  iconRegistry.addSvgIcon( 'announcement', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-announcement-24px.svg`));
+  //安全图标
+  iconRegistry.addSvgIcon( 'beenhere', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-beenhere-24px.svg`))
+  //编辑图标
+  iconRegistry.addSvgIcon( 'edit', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-edit-24px.svg`));
 
 }

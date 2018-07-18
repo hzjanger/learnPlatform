@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
-  MatCardModule, MatChipsModule, MatGridListModule,
+  MatCardModule,
+  MatChipsModule,
+  MatGridListModule,
   MatIconModule,
   MatInputModule,
-  MatListModule,
+  MatListModule, MatPaginatorModule, MatSelectModule,
   MatSlideToggleModule,
+  MatTableModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -21,7 +24,10 @@ import {
     MatListModule,
     MatCardModule,
     MatChipsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSelectModule
 
   ],
   declarations: [
@@ -36,7 +42,10 @@ import {
     MatListModule,
     MatCardModule,
     MatChipsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSelectModule
   ]
 })
 export class MaterialCoreModule { }
