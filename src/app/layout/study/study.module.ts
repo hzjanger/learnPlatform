@@ -28,6 +28,14 @@ import { PersonalOperateRecordComponent } from './personal/personal-operate-reco
 import { PersonalNameAttestComponent } from './personal/personal-name-attest/personal-name-attest.component';
 import { PersonalStudentAttestComponent } from './personal/personal-student-attest/personal-student-attest.component';
 import { PersonalReceiveAddressComponent } from './personal/personal-receive-address/personal-receive-address.component';
+import { MyCourseDynamicComponent } from './my-course/my-course-dynamic/my-course-dynamic.component';
+import { MyCourseComponent } from './my-course/my-course.component';
+import { CourseActualCombatComponent } from './my-course/course-actual-combat/course-actual-combat.component';
+import { CourseNotesComponent } from './my-course/course-notes/course-notes.component';
+import { CourseProblemComponent } from './my-course/course-problem/course-problem.component';
+import { CourseEssayComponent } from './my-course/course-essay/course-essay.component';
+import { StudyCourseComponent } from './my-course/study-course/study-course.component';
+import { StudyRoutComponent } from './my-course/study-rout/study-rout.component';
 
 @NgModule({
   imports: [
@@ -58,7 +66,15 @@ import { PersonalReceiveAddressComponent } from './personal/personal-receive-add
     PersonalOperateRecordComponent,
     PersonalNameAttestComponent,
     PersonalStudentAttestComponent,
-    PersonalReceiveAddressComponent
+    PersonalReceiveAddressComponent,
+    MyCourseDynamicComponent,
+    MyCourseComponent,
+    CourseActualCombatComponent,
+    CourseNotesComponent,
+    CourseProblemComponent,
+    CourseEssayComponent,
+    StudyCourseComponent,
+    StudyRoutComponent
   ],
   exports: [
     NavbarComponent,
@@ -72,7 +88,15 @@ import { PersonalReceiveAddressComponent } from './personal/personal-receive-add
     SearchCourseComponent,
     SearchBlogComponent,
     SearchProblemComponent,
-    SearchComponent
+    SearchComponent,
+    MyCourseDynamicComponent,
+    MyCourseComponent,
+    CourseActualCombatComponent,
+    CourseNotesComponent,
+    CourseProblemComponent,
+    CourseEssayComponent,
+    StudyCourseComponent,
+    StudyRoutComponent
   ]
 })
 export class StudyModule {

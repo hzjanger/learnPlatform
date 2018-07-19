@@ -9,7 +9,7 @@ import {
   MatInputModule,
   MatListModule, MatPaginatorModule, MatSelectModule,
   MatSlideToggleModule,
-  MatTableModule,
+  MatTableModule, MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -27,7 +27,8 @@ import {
     MatGridListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule
 
   ],
   declarations: [
@@ -45,7 +46,8 @@ import {
     MatGridListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule
   ]
 })
 export class MaterialCoreModule { }

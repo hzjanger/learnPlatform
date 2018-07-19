@@ -28,8 +28,18 @@ export const loadSvgResource = (iconRegistry: MatIconRegistry, sanitizer: DomSan
   //社交图标
   iconRegistry.addSvgIcon( 'announcement', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-announcement-24px.svg`));
   //安全图标
-  iconRegistry.addSvgIcon( 'beenhere', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-beenhere-24px.svg`))
+  iconRegistry.addSvgIcon( 'beenhere', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-verified_user-24px.svg`))
   //编辑图标
   iconRegistry.addSvgIcon( 'edit', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/outline-edit-24px.svg`));
+  //home图标
+  iconRegistry.addSvgIcon( 'home', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-home-24px.svg`));
+  //书籍图标
+  iconRegistry.addSvgIcon( 'book', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-book-24px.svg`));
+  //设置图标
+  iconRegistry.addSvgIcon( 'setting', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseling-setting-20px.svg`));
+  //文章图标
+  iconRegistry.addSvgIcon( 'library-book', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-library_books-24px.svg`));
+  //路径图标
+  iconRegistry.addSvgIcon( 'rout', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/rout.svg`));
 
 }
