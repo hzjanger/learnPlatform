@@ -36,6 +36,9 @@ import { CourseProblemComponent } from './my-course/course-problem/course-proble
 import { CourseEssayComponent } from './my-course/course-essay/course-essay.component';
 import { StudyCourseComponent } from './my-course/study-course/study-course.component';
 import { StudyRoutComponent } from './my-course/study-rout/study-rout.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { StudentNoteComponent } from './course-detail/student-note/student-note.component';
+import { AnswerCommentComponent } from './course-detail/answer-comment/answer-comment.component';
 
 @NgModule({
   imports: [
@@ -74,7 +77,10 @@ import { StudyRoutComponent } from './my-course/study-rout/study-rout.component'
     CourseProblemComponent,
     CourseEssayComponent,
     StudyCourseComponent,
-    StudyRoutComponent
+    StudyRoutComponent,
+    CourseDetailComponent,
+    StudentNoteComponent,
+    AnswerCommentComponent
   ],
   exports: [
     NavbarComponent,
@@ -96,7 +102,10 @@ import { StudyRoutComponent } from './my-course/study-rout/study-rout.component'
     CourseProblemComponent,
     CourseEssayComponent,
     StudyCourseComponent,
-    StudyRoutComponent
+    StudyRoutComponent,
+    CourseDetailComponent,
+    StudentNoteComponent,
+    AnswerCommentComponent
   ]
 })
 export class StudyModule {

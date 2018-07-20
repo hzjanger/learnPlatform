@@ -1,7 +1,6 @@
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 export const loadSvgResource = (iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) => {
-
   const imgUrl = 'assets/img/svg';
   //搜索图标
   iconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl(`${imgUrl}/baseline-search-24px.svg`))
@@ -41,5 +40,17 @@ export const loadSvgResource = (iconRegistry: MatIconRegistry, sanitizer: DomSan
   iconRegistry.addSvgIcon( 'library-book', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-library_books-24px.svg`));
   //路径图标
   iconRegistry.addSvgIcon( 'rout', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/rout.svg`));
+  //半圆图标
+  iconRegistry.addSvgIcon( 'semicircle', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/半圆.svg`));
+  //空心圆
+  iconRegistry.addSvgIcon( 'radio-button', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-radio_button_unchecked-24px.svg`));
+  //播放图标
+  iconRegistry.addSvgIcon( 'play-circle', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-play_circle_filled-24px.svg`));
+  //已完成图标
+  iconRegistry.addSvgIcon( 'check-circle', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-check_circle-24px.svg`));
 
-}
+
+
+
+
+};

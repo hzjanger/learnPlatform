@@ -22,6 +22,7 @@ import {CourseNotesComponent} from './my-course/course-notes/course-notes.compon
 import {CourseProblemComponent} from './my-course/course-problem/course-problem.component';
 import {CourseEssayComponent} from './my-course/course-essay/course-essay.component';
 import {StudyRoutComponent} from './my-course/study-rout/study-rout.component';
+import {CourseDetailComponent} from './course-detail/course-detail.component';
 
 const routes: Routes = [
   {path: 'study', component: BodyComponent},
@@ -49,9 +50,8 @@ const routes: Routes = [
       {path: 'notebook', component: CourseNotesComponent},
       {path: 'problem', component: CourseProblemComponent},
       {path: 'articles', component: CourseEssayComponent},
-    ]}
-
-
+    ]},
+  {path: 'learn', component: CourseDetailComponent}
 ]
 @NgModule ({
   imports: [

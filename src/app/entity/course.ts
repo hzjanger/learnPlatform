@@ -1,3 +1,5 @@
+import {st} from '@angular/core/src/render3';
+
 export class course {
   _name: string;
   _type: string;
@@ -55,4 +57,16 @@ export class course {
     this._star_grade = value;
   }
 
+}
+
+
+export class a {
+  name: string;
+  intr: string;
+  dir: b;
+}
+
+export class b {
+  dir: string;
+  sta: string;
 }
