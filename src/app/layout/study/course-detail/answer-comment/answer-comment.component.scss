@@ -9,3 +9,12 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.answer-nav-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 1rem;
+
+}
