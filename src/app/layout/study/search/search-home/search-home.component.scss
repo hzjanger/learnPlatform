@@ -1,0 +1,19 @@
+.more-result-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-result-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 12rem;
+  border: 1px solid #D9DDE1;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin: 1rem 0;
+}

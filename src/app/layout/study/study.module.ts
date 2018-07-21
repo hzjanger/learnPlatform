@@ -39,6 +39,9 @@ import { StudyRoutComponent } from './my-course/study-rout/study-rout.component'
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { StudentNoteComponent } from './course-detail/student-note/student-note.component';
 import { AnswerCommentComponent } from './course-detail/answer-comment/answer-comment.component';
+import { CourseCardComponent } from './course-card/course-card.component';
+import { CourseAssessComponent } from './course-detail/course-assess/course-assess.component';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 
 @NgModule({
   imports: [
@@ -49,6 +52,7 @@ import { AnswerCommentComponent } from './course-detail/answer-comment/answer-co
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
+    NgZorroAntdModule
   ],
   declarations: [
     NavbarComponent,
@@ -80,7 +84,9 @@ import { AnswerCommentComponent } from './course-detail/answer-comment/answer-co
     StudyRoutComponent,
     CourseDetailComponent,
     StudentNoteComponent,
-    AnswerCommentComponent
+    AnswerCommentComponent,
+    CourseCardComponent,
+    CourseAssessComponent
   ],
   exports: [
     NavbarComponent,

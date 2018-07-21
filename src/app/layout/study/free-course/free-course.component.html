@@ -56,53 +56,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
-      </div>
-      <div class="col-3">
-        <app-course-list></app-course-list>
+      <div class="col-3" *ngFor="let course of courses">
+        <app-course-list [freecourse]="course"></app-course-list>
       </div>
     </div>
     <div class="page-box">
@@ -110,5 +65,3 @@
     </div>
   </div>
 </div>
-
-

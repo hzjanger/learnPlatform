@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {course} from '../../../../entity/course';
 
 @Component({
   selector: 'app-search-home',

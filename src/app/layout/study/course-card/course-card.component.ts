@@ -1,11 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {course} from '../../../entity/course';
 
 @Component({
-  selector: 'app-course-list',
-  templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.scss'],
+  selector: 'app-course-card',
+  templateUrl: './course-card.component.html',
+  styleUrls: ['./course-card.component.scss'],
   animations: [
     trigger('courseState', [
       state('inactive', style({
@@ -33,9 +32,7 @@ import {course} from '../../../entity/course';
   //   ])
   // ]
 })
-export class CourseListComponent implements OnInit {
-
-  @Input() freecourse: course;
+export class CourseCardComponent implements OnInit {
 
   state: string = 'inactive';
 
@@ -56,5 +53,6 @@ export class CourseListComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FreeCourseService} from '../../../service/free-course.service';
+import {course} from '../../../entity/course';
+import {a} from '../../../entity/a';
 
 @Component({
   selector: 'app-free-course',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./free-course.component.scss']
 })
 export class FreeCourseComponent implements OnInit {
+
+  courses: course[];
 
   page = 1;
 
@@ -22,11 +27,24 @@ export class FreeCourseComponent implements OnInit {
 
   course_difficult: string[] = [
     "全部", "入门", "初级", "中级", "高级"
-  ]
+  ];
 
-  constructor() { }
+  constructor(private freeCourseService: FreeCourseService) { }
 
   ngOnInit() {
+    this.getNewCourse();
   }
+
+  getNewCourse() {
+    this.freeCourseService.getNewCourse()
+      .subscribe((data: course[]) => {
+        this.courses = data;
+        console.log(this.courses)
+        console.log(this.courses.length)
+        // console.log(this.courses.data[1]);
+      })
+  }
+
+
 
 }

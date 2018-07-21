@@ -1,14 +1,14 @@
 <mat-card (mouseenter)="toggleState()" (mouseleave)="toggleState()">
-  <img mat-card-image src="assets/img/course_list_1.jpg">
+  <img mat-card-image [src]="freecourse.picturepath">
   <mat-card-content>
-    <p><a [@courseState]="state">Vue2.5开发去哪儿网App 从零基础入门到实战项目</a></p>
+    <p class="free-course-name" [title]="freecourse.coursename"><a [@courseState]="state">{{freecourse.coursename}}</a></p>
     <p class="center">
-      <span>实战</span>
-      <span>中级</span>
+      <!--<span>实战</span>-->
+      <span>{{freecourse.coursedifficulty}}</span>
       <mat-icon svgIcon="person-outline"></mat-icon>
-      <span>1111</span>
-      <app-course-star></app-course-star>
+      <span>{{freecourse.coursetailnum}}</span>
+      <!--<app-course-star></app-course-star>-->
     </p>
-    <p><span>￥666.66</span></p>
+    <p class="free-course-summaru">{{freecourse.coursesummary}}</p>
   </mat-card-content>
 </mat-card>

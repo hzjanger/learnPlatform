@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {course} from '../../../entity/course';
+import {FreeCourseService} from '../../../service/free-course.service';
 
 @Component({
   selector: 'app-body',
@@ -8,6 +10,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 })
 export class BodyComponent implements OnInit {
+
   imgUrl: string = "assets/img/";
   carouseImg: any[] = [
     {img: this.imgUrl+"11.png", color: "#FBF6DF"},
@@ -22,4 +25,5 @@ export class BodyComponent implements OnInit {
 
   ngOnInit() {
   }
+
 }
