@@ -7,7 +7,7 @@ import {
   MatGridListModule,
   MatIconModule,
   MatInputModule,
-  MatListModule, MatPaginatorModule, MatProgressBarModule, MatSelectModule,
+  MatListModule, MatPaginatorModule, MatProgressBarModule, MatSelectModule, MatSidenavModule,
   MatSlideToggleModule,
   MatTableModule, MatTabsModule,
   MatToolbarModule
@@ -29,13 +29,15 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatTabsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatSidenavModule
 
   ],
   declarations: [
 
   ],
   exports: [
+    CommonModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
@@ -49,7 +51,8 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatTabsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatSidenavModule
   ]
 })
 export class MaterialCoreModule { }

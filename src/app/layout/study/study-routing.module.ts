@@ -23,39 +23,54 @@ import {CourseProblemComponent} from './my-course/course-problem/course-problem.
 import {CourseEssayComponent} from './my-course/course-essay/course-essay.component';
 import {StudyRoutComponent} from './my-course/study-rout/study-rout.component';
 import {CourseDetailComponent} from './course-detail/course-detail.component';
+import {VideoComponent} from './video/video.component';
+import {StudyComponent} from './study.component';
+import {Body} from '@angular/http/src/body';
+import {BlogComponent} from './blog/blog.component';
+import {ProblemComponent} from './problem/problem.component';
 
 const routes: Routes = [
-  {path: 'study', component: BodyComponent},
-  {path: 'freeCourse', component: FreeCourseComponent},
-  {path: 'search', component: SearchComponent, children: [
-      {path: '', component: SearchHomeComponent},
-      {path: 'course', component: SearchCourseComponent},
-      {path: 'ask', component: SearchProblemComponent},
-      {path: 'blog', component: SearchBlogComponent}
-    ]},
-  {path: 'personal', component: PersonalComponent, children: [
-      {path: '', component: PersonalBindInfoComponent},
-      {path: 'setprofile', component: PersonalInfoComponent},
-      {path: 'oplog', component: PersonalOperateRecordComponent},
-      {path: 'authenticate', component: PersonalNameAttestComponent},
-      {path: 'certificate', component: PersonalStudentAttestComponent},
-      {path: 'address', component: PersonalReceiveAddressComponent}
+  {path: 'study', component: StudyComponent, children: [
+      {path: '', component: BodyComponent},
+      {path: 'freeCourse', component: FreeCourseComponent},
+      {path: 'search', component: SearchComponent, children: [
+          {path: '', component: SearchHomeComponent},
+          {path: 'course', component: SearchCourseComponent},
+          {path: 'ask', component: SearchProblemComponent},
+          {path: 'blog', component: SearchBlogComponent}
+        ]},
+      {path: 'personal', component: PersonalComponent, children: [
+          {path: '', component: PersonalBindInfoComponent},
+          {path: 'setprofile', component: PersonalInfoComponent},
+          {path: 'oplog', component: PersonalOperateRecordComponent},
+          {path: 'authenticate', component: PersonalNameAttestComponent},
+          {path: 'certificate', component: PersonalStudentAttestComponent},
+          {path: 'address', component: PersonalReceiveAddressComponent}
+
+        ]},
+      {path: 'mycourse', component: MyCourseComponent, children: [
+          {path: '', component: MyCourseDynamicComponent},
+          {path: 'courses', component: StudyCourseComponent},
+          {path: 'rout', component: StudyRoutComponent},
+          {path: 'szcourses', component: CourseActualCombatComponent},
+          {path: 'notebook', component: CourseNotesComponent},
+          {path: 'problem', component: CourseProblemComponent},
+          {path: 'articles', component: CourseEssayComponent},
+        ]},
+      {path: 'learn', component: CourseDetailComponent},
+      {path: 'video', component: VideoComponent},
+      {path: 'problem', component: ProblemComponent}
 
     ]},
-  {path: 'mycourse', component: MyCourseComponent, children: [
-      {path: '', component: MyCourseDynamicComponent},
-      {path: 'courses', component: StudyCourseComponent},
-      {path: 'rout', component: StudyRoutComponent},
-      {path: 'szcourses', component: CourseActualCombatComponent},
-      {path: 'notebook', component: CourseNotesComponent},
-      {path: 'problem', component: CourseProblemComponent},
-      {path: 'articles', component: CourseEssayComponent},
-    ]},
-  {path: 'learn', component: CourseDetailComponent}
+  {path: 'blog', component: BlogComponent},
+
+
 ]
 @NgModule ({
   imports: [
     RouterModule.forChild(routes)
+
+
   ],
   exports: [
     RouterModule

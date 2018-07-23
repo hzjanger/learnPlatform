@@ -39,8 +39,8 @@ export class FreeCourseComponent implements OnInit {
     this.freeCourseService.getNewCourse()
       .subscribe((data: course[]) => {
         this.courses = data;
-        console.log(this.courses)
-        console.log(this.courses.length)
+        // console.log(this.courses)
+        // console.log(this.courses.length)
         // console.log(this.courses.data[1]);
       })
   }

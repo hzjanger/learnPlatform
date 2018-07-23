@@ -50,6 +50,8 @@ export const loadSvgResource = (iconRegistry: MatIconRegistry, sanitizer: DomSan
   iconRegistry.addSvgIcon( 'check-circle', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-check_circle-24px.svg`));
   //点赞图标
   iconRegistry.addSvgIcon( 'thumb-up', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-thumb_up-24px.svg`));
+  //眼睛图标
+  iconRegistry.addSvgIcon( 'remove-red-eye', sanitizer.bypassSecurityTrustResourceUrl( `${imgUrl}/baseline-remove_red_eye-24px.svg`));
 
 
 

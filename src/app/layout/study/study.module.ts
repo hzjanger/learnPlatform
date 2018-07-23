@@ -42,17 +42,30 @@ import { AnswerCommentComponent } from './course-detail/answer-comment/answer-co
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseAssessComponent } from './course-detail/course-assess/course-assess.component';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {VgCoreModule} from 'videogular2/core';
+import {VgBufferingModule} from 'videogular2/buffering';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgControlsModule} from 'videogular2/controls';
+import { VideoComponent } from './video/video.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogNavComponent } from './blog/blog-nav/blog-nav.component';
+import { BlogBodyComponent } from './blog/blog-body/blog-body.component';
+import { ProblemComponent } from './problem/problem.component';
+import { ProblemListComponent } from './problem/problem-list/problem-list.component';
 
 @NgModule({
   imports: [
-    CommonModule,
     StudyRoutingModule,
     MaterialCoreModule,
     FormsModule,
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   declarations: [
     NavbarComponent,
@@ -86,7 +99,13 @@ import {NgZorroAntdModule} from 'ng-zorro-antd';
     StudentNoteComponent,
     AnswerCommentComponent,
     CourseCardComponent,
-    CourseAssessComponent
+    CourseAssessComponent,
+    VideoComponent,
+    BlogComponent,
+    BlogNavComponent,
+    BlogBodyComponent,
+    ProblemComponent,
+    ProblemListComponent
   ],
   exports: [
     NavbarComponent,
@@ -111,7 +130,12 @@ import {NgZorroAntdModule} from 'ng-zorro-antd';
     StudyRoutComponent,
     CourseDetailComponent,
     StudentNoteComponent,
-    AnswerCommentComponent
+    AnswerCommentComponent,
+    BlogComponent,
+    BlogNavComponent,
+    BlogBodyComponent,
+    ProblemComponent,
+    ProblemListComponent
   ]
 })
 export class StudyModule {

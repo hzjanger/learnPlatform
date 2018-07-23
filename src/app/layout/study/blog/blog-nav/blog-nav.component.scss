@@ -1,0 +1,38 @@
+.blog-nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-nav-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.blog-nav-left ul, .blog-nav-left ul li {
+  border-bottom: 0;
+}
+
+.blog-nav-left ul li:hover {
+  border-bottom: 2px solid #1890ff;
+}
+
+.blog-nav-left .logo img {
+  max-height: 48px;
+}
+
+.blog-nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.dark-mode {
+  margin-right: 2rem;
+}

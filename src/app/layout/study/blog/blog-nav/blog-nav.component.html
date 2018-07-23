@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 blog-nav-box">
+      <div class="blog-nav-left">
+        <div class="logo">
+          <img src="assets/img/logo.png">
+        </div>
+        <ul nz-menu [nzMode]="'horizontal'">
+          <li nz-menu-item>
+            <a href="#" rel="noopener noreferrer">首页</a>
+          </li>
+          <li nz-menu-item>
+            <a href="#" rel="noopener noreferrer">免费课程</a>
+          </li>
+          <li nz-menu-item>
+            <a href="#" rel="noopener noreferrer">手记</a>
+          </li>
+          <li nz-menu-item>
+            <a href="https://ng.ant.design" target="_blank" rel="noopener noreferrer">猿问</a>
+          </li>
+        </ul>
+        <form class="search-form">
+          <mat-form-field class="search-full-width">
+            <input matInput placeholder="" value="">
+            <mat-icon matSuffix svgIcon="search" class="search-icon"
+                      (click)="onSearch()"></mat-icon>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="blog-nav-right">
+        <mat-slide-toggle class="dark-mode">黑夜模式</mat-slide-toggle>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">登录</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">注册</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -42,4 +42,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 -  service 存放服务的文件夹
 -  utils 导入的字体图标
 
+- 视频播放组件  video
+
 

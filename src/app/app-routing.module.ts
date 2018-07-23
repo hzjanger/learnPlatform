@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 const routes: Routes = [
   {path: '', redirectTo: '/study', pathMatch: 'full'},
-  // {path: 'search', redirectTo: '/search', pathMatch: 'full'}
 
 ];
 
