@@ -55,6 +55,7 @@ import { ProblemListComponent } from './problem/problem-list/problem-list.compon
 
 @NgModule({
   imports: [
+    CommonModule,
     StudyRoutingModule,
     MaterialCoreModule,
     FormsModule,

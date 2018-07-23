@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PersonalComponent implements OnInit {
 
   account_operation: any[] = [
-    {operation: '账号绑定', link: '/personal'},
+    {operation: '账号绑定', link: '/study/personal'},
     {operation: '个人信息', link: 'setprofile'},
     {operation: '操作记录', link: 'oplog'},
     {operation: '实名认证', link: 'authenticate'},

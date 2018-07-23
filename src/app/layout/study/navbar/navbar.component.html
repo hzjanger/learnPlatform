@@ -5,7 +5,7 @@
         <div style="display: flex;align-items: center">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" routerLink="/freeCourse">免费课程</a>
+              <a class="nav-link" routerLink="./freeCourse">免费课程</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">职业路径</a>
@@ -28,7 +28,7 @@
               <input matInput placeholder="" value="">
               <!--<mat-icon >search</mat-icon>-->
               <mat-icon matSuffix svgIcon="search" class="search-icon"
-                        (click)="onSearch()"></mat-icon>
+                        (click)="onSearch()" routerLink="./search"></mat-icon>
             </mat-form-field>
           </form>
         </div>

@@ -1,16 +1,24 @@
 <mat-drawer-container class="video-box" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer #drawer mode="side" position="end">
     <p>Auto-resizing sidenav</p>
     <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
     <button (click)="showFiller = !showFiller" mat-raised-button>
       Toggle extra text
     </button>
   </mat-drawer>
+  <mat-drawer-content>
+    <div class="video-content">
+      <div class="video-content-left">左</div>
+      <!--视频播放的右边-->
+      <div class="video-content-right">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon svgIcon="library-book">menu</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-drawer-content>
 
-  <div class="video-sidenav-content">
-    <button mat-icon-button (click)="drawer.toggle()">
-      <mat-icon svgIcon="library-book">menu</mat-icon>
-    </button>
-  </div>
+  <!--<div class="video-sidenav-content">-->
 
+  <!--</div>-->
 </mat-drawer-container>

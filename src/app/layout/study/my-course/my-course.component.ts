@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyCourseComponent implements OnInit {
 
   course_menu: any[] = [
-    {icon: 'home', value: '动态', link: '/mycourse'},
+    {icon: 'home', value: '动态', link: '/study/mycourse'},
     {icon: 'book', value: '课程', link: 'courses'},
     {icon: 'rout', value: '路径', link: 'rout'},
     {icon: 'help', value: '实战', link: 'szcourses'},

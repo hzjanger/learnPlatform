@@ -37,7 +37,6 @@ import {
 
   ],
   exports: [
-    CommonModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
