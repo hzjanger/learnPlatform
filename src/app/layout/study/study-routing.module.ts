@@ -28,6 +28,7 @@ import {StudyComponent} from './study.component';
 import {Body} from '@angular/http/src/body';
 import {BlogComponent} from './blog/blog.component';
 import {ProblemComponent} from './problem/problem.component';
+import {VideoTestComponent} from './video-test/video-test.component';
 
 const routes: Routes = [
   {path: 'study', component: StudyComponent, children: [
@@ -58,7 +59,7 @@ const routes: Routes = [
           {path: 'articles', component: CourseEssayComponent},
         ]},
       {path: 'learn', component: CourseDetailComponent},
-      {path: 'video', component: VideoComponent},
+      {path: 'video', component: VideoTestComponent},
       {path: 'problem', component: ProblemComponent}
 
     ]},

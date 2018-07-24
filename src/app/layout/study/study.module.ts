@@ -52,6 +52,7 @@ import { BlogNavComponent } from './blog/blog-nav/blog-nav.component';
 import { BlogBodyComponent } from './blog/blog-body/blog-body.component';
 import { ProblemComponent } from './problem/problem.component';
 import { ProblemListComponent } from './problem/problem-list/problem-list.component';
+import { VideoTestComponent } from './video-test/video-test.component';
 
 @NgModule({
   imports: [
@@ -106,7 +107,8 @@ import { ProblemListComponent } from './problem/problem-list/problem-list.compon
     BlogNavComponent,
     BlogBodyComponent,
     ProblemComponent,
-    ProblemListComponent
+    ProblemListComponent,
+    VideoTestComponent
   ],
   exports: [
     NavbarComponent,
@@ -136,7 +138,8 @@ import { ProblemListComponent } from './problem/problem-list/problem-list.compon
     BlogNavComponent,
     BlogBodyComponent,
     ProblemComponent,
-    ProblemListComponent
+    ProblemListComponent,
+    VideoTestComponent
   ]
 })
 export class StudyModule {
