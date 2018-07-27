@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {CourseDetailService} from '../../../service/course-detail.service';
+import {coursenew} from '../../../entity/coursenew';
 
 @Component({
   selector: 'app-course-detail',
@@ -30,9 +33,26 @@ export class CourseDetailComponent implements OnInit {
       ]},
   ];
 
-  constructor() { }
+  //储存课程详细信息
+  courseDetail: coursenew;
+
+  constructor(private route: ActivatedRoute,
+              private courseDetailService: CourseDetailService) { }
 
   ngOnInit() {
+    this.getCourseDetrail();
   }
+
+  getCourseDetrail(): void {
+    //  前面的(+)号会把数字字符串转化为数字类型
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.courseDetailService.getCourseDetail(117)
+      .subscribe((data: coursenew) => {
+        console.log(data);
+        this.courseDetail = data;
+      })
+
+  }
+
 
 }

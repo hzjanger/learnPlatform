@@ -1,5 +1,7 @@
-import {course} from './course';
+// import {course} from './course';
 
-export interface a {
-  data: course[];
-}
+// export interface a {
+//   // data: course[];
+// }
+
+

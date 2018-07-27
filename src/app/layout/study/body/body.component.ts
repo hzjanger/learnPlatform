@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {course} from '../../../entity/course';
+// import {course} from '../../../entity/course';
 import {FreeCourseService} from '../../../service/free-course.service';
 
 @Component({
@@ -19,6 +19,8 @@ export class BodyComponent implements OnInit {
     {img: this.imgUrl+"44.jpeg", color: "#2C1041"},
     {img: this.imgUrl+"55.jpeg", color: "#E7E7E7"},
     {img: this.imgUrl+"66.png", color: "#8791a1"}
+
+
   ];
 
   constructor() { }

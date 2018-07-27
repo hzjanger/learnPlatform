@@ -3,33 +3,12 @@
     <mat-nav-list>
       <mat-list-item>
         <a matLine href="#">第一章</a>
-        <!--<a matLine href="...">{{ link }}</a>-->
-        <!--<button mat-icon-button (click)="showInfo(link)">-->
-        <!--<mat-icon>info</mat-icon>-->
-        <!--</button>-->
       </mat-list-item>
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
     <div class="video-content">
       <div class="video-content-left">
-        <!--<vg-player>-->
-          <!--<vg-controls>-->
-            <!--<vg-play-pause></vg-play-pause>-->
-            <!--<vg-scrub-bar>-->
-              <!--<vg-scrub-bar-current-time></vg-scrub-bar-current-time>-->
-            <!--</vg-scrub-bar>-->
-            <!--<vg-fullscreen></vg-fullscreen>-->
-          <!--</vg-controls>-->
-          <!--&lt;!&ndash;<vg-buffering [vgFor]="my-video"></vg-buffering>&ndash;&gt;-->
-          <!--<video #myMedia-->
-                 <!--[vgMedia]="myMedia"-->
-                 <!--id="my-video"-->
-                 <!--preload="auto"-->
-                 <!--src="http://static.videogular.com/assets/videos/videogular.mp4"-->
-                 <!--type="video/mp4">-->
-          <!--</video>-->
-        <!--</vg-player>-->
         <vg-player>
           <vg-overlay-play></vg-overlay-play>
           <vg-buffering></vg-buffering>
@@ -57,28 +36,19 @@
           </vg-controls>
 
           <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin>
-            <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
-            <source src="http://static.videogular.com/assets/videos/videogular.ogg" type="video/ogg">
-            <source src="http://static.videogular.com/assets/videos/videogular.webm" type="video/webm">
-
-            <track kind="subtitles" label="English" src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt" srclang="en" default>
-            <track kind="subtitles" label="Español" src="http://static.videogular.com/assets/subs/pale-blue-dot-es.vtt" srclang="es">
+            <source [src]="videoUrl" type="video/mp4">
           </video>
         </vg-player>
       </div>
       <!--视频播放的右边-->
       <div class="video-content-right">
         <button mat-icon-button (click)="showMenu(drawer)">
-          <!--<mat-icon svgIcon="library-book">menu</mat-icon>-->
           <mat-icon>{{arrow}}</mat-icon>
         </button>
       </div>
     </div>
   </mat-drawer-content>
 
-  <!--<div class="video-sidenav-content">-->
-
-  <!--</div>-->
 </mat-drawer-container>
 
 

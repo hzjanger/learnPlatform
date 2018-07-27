@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {course} from '../../../entity/course';
+import {freeCourse} from '../../../entity/freeCourse';
+import {CourseBaseInfo} from '../../../entity/course-base-info';
+// import {course} from '../../../entity/course';
 
 @Component({
   selector: 'app-course-list',
@@ -35,7 +37,7 @@ import {course} from '../../../entity/course';
 })
 export class CourseListComponent implements OnInit {
 
-  @Input() freecourse: course;
+  @Input() course: CourseBaseInfo;
 
   state: string = 'inactive';
 
@@ -45,6 +47,7 @@ export class CourseListComponent implements OnInit {
     } else {
       this.state = 'active';
     }
+
     // // this.state = this.state === 'inactive' ? 'active': 'inacitve';
     // // this.state = this.state === 'active' ? 'inactive' : 'active';
     // console.log('1 == ' + this.state);

@@ -21,6 +21,11 @@
   padding: 1rem 0;
 }
 
+.course-tool-box mat-chip-list mat-chip.active{
+  background-color: #3f51b5;
+  color: #fff;
+}
+
 .material-icons {
   display: inline-flex;
   background-color: #cccccc;
@@ -48,4 +53,24 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+button {
+  outline: none;
+  background: transparent;
+}
+
+.page-current {
+  color: #4d555d;
+  background: #f3f5f7;
+  margin: 0 .5rem 0 .5rem;
+}
+
+.button-row {
+  margin-bottom: 1rem;
+}
+
+
+button.active {
+  color: red;
 }

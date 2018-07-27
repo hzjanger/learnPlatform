@@ -1,0 +1,74 @@
+button {
+  outline: none;
+}
+.exam-menu-box {
+  margin: 1rem 0 1rem 0;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+}
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.title i {
+  display: inline-flex;
+  width: .4rem;
+  height: .4rem;
+  background: #FF6547;
+  margin-right: .5rem;
+
+
+}
+
+.exam-memu-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.exam-memu-top span {
+  color: #969696;
+}
+
+.exam-memu-top span a {
+  color: #00bc9b;
+  font-weight: 700;
+  margin-left: .5rem;
+}
+
+.table-menu-top {
+  background: #ededed;
+  height: 3rem;
+  margin-top: 1rem;
+  color: #999;
+}
+
+.table-menu-top tr th {
+  text-align: center;
+
+}
+
+.table-menu-list tr td {
+  text-align: center;
+  border-top: 0;
+}
+
+.table-menu-list tr {
+  border-bottom: 1px dashed #d9d9d9;
+}
+
+.table-menu-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.table-menu-bottom div button {
+  margin-left: 1rem;
+  outline: none;
+}

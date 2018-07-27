@@ -7,7 +7,7 @@ import {IMediaSubscriptions, IPlayable} from 'videogular2/src/core/vg-media/i-pl
   templateUrl: './video-test.component.html',
   styleUrls: ['./video-test.component.scss']
 })
-export class VideoTestComponent implements OnInit, IPlayable {
+export class VideoTestComponent implements OnInit {
   addTextTrack: Function;
   buffer: any;
   canPlay: boolean;
@@ -28,6 +28,8 @@ export class VideoTestComponent implements OnInit, IPlayable {
   textTracks: TextTrackList;
   time: any;
   track: any;
+
+  videoUrl = 'http://static.videogular.com/assets/videos/videogular.mp4';
 
 
 

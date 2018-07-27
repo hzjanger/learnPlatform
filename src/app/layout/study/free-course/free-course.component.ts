@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FreeCourseService} from '../../../service/free-course.service';
-import {course} from '../../../entity/course';
-import {a} from '../../../entity/a';
+import {freeCourse} from '../../../entity/freeCourse';
+import {CourseBaseInfo} from '../../../entity/course-base-info';
 
 @Component({
   selector: 'app-free-course',
@@ -10,9 +10,18 @@ import {a} from '../../../entity/a';
 })
 export class FreeCourseComponent implements OnInit {
 
-  courses: course[];
-
-  page = 1;
+  //分页的数组
+  currentIndex: number[] = [1, 2, 3, 4, 5, 6, 7];
+  //表示当前分页
+  current: number = 1;
+  //分页总数
+  allCurrent: number;
+  //存储课程信息
+  courses: freeCourse;
+  //表示是最新
+  maxNew: boolean = true;
+  //表示最热的课程
+  maxHot: boolean = false;
 
   course_direction: string[] = [
     "全部","前沿技术","前端开发","后端开发", "移动开发", "算法&数学", "云计算&大数据", "运维&测试", "数据库", "UI设计", "游戏"
@@ -32,17 +41,138 @@ export class FreeCourseComponent implements OnInit {
   constructor(private freeCourseService: FreeCourseService) { }
 
   ngOnInit() {
-    this.getNewCourse();
+    this.getAllNewCourse();
   }
 
-  getNewCourse() {
-    this.freeCourseService.getNewCourse()
-      .subscribe((data: course[]) => {
+  /**
+   * 得到最新课程, 为第一页时,即初始化时调用
+   */
+  getAllNewCourse() {
+    //将最新设置为true
+    this.maxNew = true;
+    //将最热设置为false
+    this.maxHot = false;
+    this.freeCourseService.getAllNewCourse()
+      .subscribe((data: freeCourse) => {
+        //得到数据
         this.courses = data;
-        // console.log(this.courses)
-        // console.log(this.courses.length)
-        // console.log(this.courses.data[1]);
+        //设置单前分页数  this.courses.number  是以0开头
+        this.current = this.courses.number + 1;
+        //设置总的分页数
+        this.allCurrent = this.courses.totalPages + 1;
+        //设置分页数组
+        this.setCurrentIndex();
+      });
+  }
+
+  /**
+   * 得到最新课程,通过页数
+   */
+  getNewcoursesIndex() {
+    this.freeCourseService.getNewcoursesIndex(this.current-1)
+      .subscribe((data: freeCourse) => {
+
+        //获取数据
+        this.courses = data;
+        //设置单前分页数  this.courses.number  是以0开头
+        this.current = this.courses.number + 1;
+        //设置分页数组
+        this.setCurrentIndex();
+      });
+  }
+
+  /**
+   * 得到最热课程, 回到第一页
+   */
+  getAllHotCourses() {
+    //将最热设置为true
+    this.maxHot = true;
+    //将最新设置为false
+    this.maxNew = false;
+    this.freeCourseService.getAllHotCourses()
+      .subscribe((data: freeCourse) => {
+        //得到数据
+        this.courses = data;
+        //设置单前分页数  this.courses.number  是以0开头
+        this.current = this.courses.number + 1;
+        //设置总的分页数
+        this.allCurrent = this.courses.totalPages + 1;
+        //设置分页数组
+        this.setCurrentIndex();
       })
+  }
+
+  /**
+   * 得到最热课程 通过分页
+   */
+  getHotCourseIndex() {
+    this.freeCourseService.getHotCourseIndex(this.current - 1)
+      .subscribe((data: freeCourse) => {
+        //获取数据
+        this.courses = data;
+        //设置单前分页数  this.courses.number  是以0开头
+        this.current = this.courses.number + 1;
+        //设置分页数组
+        this.setCurrentIndex();
+      })
+  }
+
+
+  /**
+   *  点击上一页或者下一页
+   * @param {number} change
+   */
+  nextOrPer(change: number) {
+    if (this.current + change < 1 || this.current + change > this.allCurrent) {
+      return;
+    }
+    this.current += change;
+    if (this.maxNew) {    //如果是最新课程
+      console.log('new');
+      this.getNewcoursesIndex();
+    } else if (this.maxHot) {   //如果是最热课程
+      console.log('hot');
+      this.getHotCourseIndex();
+    }
+  }
+
+
+  /**
+   * 点击分页
+   * @param {number} page
+   */
+  choicePage(page: number) {
+    this.current = page;
+    if (this.maxNew) {    //如果是最新课程
+      this.getNewcoursesIndex();
+    } else if (this.maxHot) {   //如果是最热课程
+      this.getHotCourseIndex();
+    }
+  }
+
+  setCurrentIndex() {
+    //设置分页数组时现将数组清空
+    this.currentIndex = [];
+    //防止页数小于1
+    if (this.current <= 0) {
+      this.current = 1;
+    } else if (this.current <= 4) {     //单前页数是1到4时
+      for (let i = 0; i < 7 && i <= this.allCurrent; i++) {
+        this.currentIndex[i] = i + 1;
+      }
+    } else if (this.current > 4 && this.current <= this.allCurrent - 3) {
+      for (let i = this.current - 3, j = 0; i < this.current + 4 && i < this.allCurrent; i++, j++) {
+        this.currentIndex[j] = i;
+      }
+    } else if (this.current > this.allCurrent - 3 && this.current <= this.allCurrent) {
+      for (let i = 6, j = 0; i >= 0; i--) {
+        if (this.allCurrent - i > 0) {
+          this.currentIndex[j] = this.allCurrent - i;
+          j++;
+        }
+      }
+      console.log(this.current);
+    }
   }
 
 

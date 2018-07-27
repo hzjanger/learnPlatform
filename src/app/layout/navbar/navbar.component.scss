@@ -1,0 +1,32 @@
+mat-toolbar-row .nav-item .nav-link {
+  color: #ffffff;
+}
+
+mat-toolbar-row .nav-item .nav-link:hover {
+  color: #f1f1ff;
+}
+
+
+.search-form {
+  min-width: 20rem;
+  max-width: 28rem;
+  width: 100%;
+  margin-left: 2rem;
+}
+
+.search-full-width {
+  width: 100%;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+
+.navbar-add {
+  justify-content: space-between;
+}
+
+.dark-mode {
+  margin-right: 2rem;
+}

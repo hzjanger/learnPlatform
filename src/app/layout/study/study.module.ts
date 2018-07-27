@@ -1,8 +1,6 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
 import { StudyComponent } from './study.component';
-import { FooterComponent } from './footer/footer.component';
 import {StudyRoutingModule} from './study-routing.module';
 import { BodyComponent } from './body/body.component';
 import {MaterialCoreModule} from '../../material-core/material-core.module';
@@ -70,9 +68,7 @@ import { VideoTestComponent } from './video-test/video-test.component';
     VgBufferingModule
   ],
   declarations: [
-    NavbarComponent,
     StudyComponent,
-    FooterComponent,
     BodyComponent,
     CourseListComponent,
     CourseStarComponent,
@@ -111,9 +107,7 @@ import { VideoTestComponent } from './video-test/video-test.component';
     VideoTestComponent
   ],
   exports: [
-    NavbarComponent,
     StudyComponent,
-    FooterComponent,
     BodyComponent,
     CourseListComponent,
     CourseStarComponent,
@@ -143,10 +137,7 @@ import { VideoTestComponent } from './video-test/video-test.component';
   ]
 })
 export class StudyModule {
-  constructor(@Optional() @SkipSelf() parent: StudyModule, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    if (parent) {
-      throw new Error('模块已经存在, 不能再次加载');
-    }
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     loadSvgResource(iconRegistry, sanitizer)
   }
 }

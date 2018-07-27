@@ -58,15 +58,12 @@ const routes: Routes = [
           {path: 'problem', component: CourseProblemComponent},
           {path: 'articles', component: CourseEssayComponent},
         ]},
-      {path: 'learn', component: CourseDetailComponent},
+      {path: 'learn/:id', component: CourseDetailComponent},
       {path: 'video', component: VideoTestComponent},
       {path: 'problem', component: ProblemComponent}
-
     ]},
   {path: 'blog', component: BlogComponent},
-
-
-]
+];
 @NgModule ({
   imports: [
     RouterModule.forChild(routes)

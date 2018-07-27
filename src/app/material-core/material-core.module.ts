@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
-  MatCardModule,
-  MatChipsModule,
+  MatCardModule, MatCheckboxModule,
+  MatChipsModule, MatDialogModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
@@ -30,7 +30,9 @@ import {
     MatSelectModule,
     MatTabsModule,
     MatProgressBarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatDialogModule
 
   ],
   declarations: [
@@ -51,7 +53,9 @@ import {
     MatSelectModule,
     MatTabsModule,
     MatProgressBarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatDialogModule
   ]
 })
 export class MaterialCoreModule { }
